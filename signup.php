@@ -8,11 +8,12 @@
                 <input type="email" id="fname" name="name" placeholder="Email">
                 <input type="text" id="lname" name="password" placeholder="Usernaem">
                 <input type="password" id="lname" name="password" placeholder="Password">
-                <input type="password" id="lname" name="password" placeholder="Reprat Password">
+                <input type="password" id="lname" name="password" placeholder="Repeat Password">
 
                 <br>
             <input type="submit" value="Submit">
         </form>
+        <p>Already have an account? <a href="login.php"> Login</a></p>
         </div>
 
 <?php

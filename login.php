@@ -8,6 +8,7 @@
                 <input type="password"  name="password" placeholder="Your pass..">
             <input type="submit" value="Submit">
         </form>
+        <p  >New here? <a href="signup.php"> Sign up</a></p>
         </div>
 
 <?php
