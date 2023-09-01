@@ -75,4 +75,20 @@
         }
 
     }
+
+    function createUser($conn,$password,$email,$userid,$username){
+         $insert="INSERT INTO users (usersName,usersemail,usersUid,usersPwd) VALUES(?,?,?,?);";
+         $stmt=mysqli_stmt_init($conn);
+         if(!mysqli_stmt_prepare($stmt,$insert)){
+            header("Location:../signup.php?error=stmtfaild");
+            exit();
+         }
+         $hashedPwd=password_hash($password,PASSWORD_DEFAULT);
+         mysqli_stmt_bind_param($stmt,"ssss",$username,$email,$userid,$hashedPwd);
+         mysqli_stmt_execute($stmt);
+         mysqli_stmt_close($stmt);
+         header("Location:../login.php? error=none");
+         exit();
+
+    }
     
